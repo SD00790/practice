@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font: 12px/1.5 tahoma, arial, 'Hiragino Sans GB', '\5b8b\4f53', sans-serif
+        }
+        
+        .item {
+            width: 218px;
+            margin: 0 22px 20px 0;
+            float: left;
+            border: 1px solid #eee;
+            background: #fff;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        
+        .item .imgContainer .imgLink {
+            width: 218px;
+            height: 218px;
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
+        }
+        
+        .info {
+            padding: 10px;
+        }
+        
+        .info .price {
+            font-size: 16px;
+            line-height: 16px;
+            overflow: hidden;
+            margin-top: 4px;
+        }
+        
+        .info .price span {
+            float: left;
+            color: #f40;
+        }
+        
+        .info .price .pricedetail {
+            font-family: arial, verdana, sans-serif;
+        }
+        
+        .info .price .postalicon {
+            float: left;
+            width: 27px;
+            height: 14px;
+            color: #fff;
+            font-size: 12px;
+            margin-left: 4px;
+            text-align: center;
+            vertical-align: middle;
+            background: #f85300;
+        }
+        
+        .info .title {
+            width: 197px;
+            height: 34px;
+            overflow: hidden;
+            color: #000;
+            margin-top: 5px;
+            display: block;
+        }
+        
+        info .title .hl {
+            color: #ef470f;
+        }
+        
+        .info .shopName {
+            overflow: hidden;
+            margin-top: 5px;
+        }
+        
+        .info .shopName .shopNick {
+            float: left;
+            display: block;
+            overflow: hidden;
+            width: 100px;
+            white-space: nowrap;
+            color: #888;
+            text-decoration: underline;
+        }
+        
+        .info .shopName .payNum {
+            float: right;
+            width: 85px;
+            overflow: hidden;
+            text-align: right;
+            white-space: nowrap;
+            display: block;
+            color: #888;
+            text-overflow: ellipsis;
+        }
+        
+        .info .moreInfo {
+            height: 23px;
+            margin-top: 5px;
+        }
+        
+        .info .dsr-info {
+            display: block;
+            position: relative;
+            float: right;
+            line-height: 15px;
+            width: 105px;
+            height: 18px;
+            margin-top: 6px;
+        }
+        
+        .info .dsr-info .active {
+            border: 1px solid #d9d9d9;
+            height: 16px;
+            line-height: 16px;
+            padding-left: 3px;
+        }
+        
+        .info .dsr-info .dsr-info-tgr {
+            position: relative;
+            display: block;
+            color: gray;
+            cursor: default;
+            outline: 0;
+            text-decoration: none;
+        }
+        
+        .info .dsr-info .dsr-info-list {
+            position: absolute;
+            display: none;
+            top: 15px;
+            width: 103px;
+            left: 0;
+            color: gray;
+            list-style: none;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 0 0 3px 3px;
+            margin-top: -15px;
+        }
+        
+        .info .dsr-info .dsr-info-list span {
+            display: block;
+            height: 18px;
+            padding: 2px 5px;
+            font-weight: 400;
+            white-space: nowrap;
+        }
+        
+        .info .dsr-info .dsr-info-list .morethan {
+            color: #b30f00;
+            zoom: 1;
+        }
+        
+        [class^=icon-]:before {
+            font-family: iconfont;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            font-variant: normal;
+            display: inline-block;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .info .dsr-info .dsr-info-num {
+            margin-left: 5px;
+        }
+        
+        .info .dsr-info .dsr-info-tgr .dropdown-tgr-arrow {
+            position: absolute;
+            top: 6px;
+            right: 3px;
+            width: 7px;
+            display: inline-block;
+            height: 4px;
+            font-size: 0;
+            padding: 0;
+            background: url(img/btn.png) -129px -285px no-repeat;
+        }
+        
+        .info .dsr-info .dsr-info-list .listup-tgr-arrow {
+            position: absolute;
+            top: 6px;
+            right: 3px;
+            width: 7px;
+            display: inline-block;
+            height: 4px;
+            font-size: 0;
+            padding: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="item">
+        <a target="_blank" href="#">
+
+            <div class="imgContainer">
+                <span class="imgLink">
+                    <img src="img/img1.jpg">
+                </span>
+            </div>
+            <div class="info">
+                <p class="price">
+                    <span class="pricedetail">¥ <strong>1890</strong></span>
+                    <span class="postalicon">包邮</span>
+                </p>
+                <span class="title" title="TOMMY HILFIGER女装2020春季经典LOGO印花针">
+                    TOMMY HILFIGE020春季经典LOGO印花针
+                    
+                </span>
+                <p class="shopName">
+                    <span class="shopNick">tommyhilfiger</span>
+                    <span class="payNum">20人付款</span>
+                </p>
+                <div class="moreInfo">
+                    <div class="dsr-info">
+                        <span class="active dsr-info-tgr">
+                            <span class="icon-btn-dsr">如实描述:</span>
+                        <span class="dsr-info-num">4.8</span>
+                        <span class="dropdown-tgr-arrow"></span>
+                        </span>
+                        <ul class="dsr-info-list">
+                            <li>
+                                <span class="morethan">如实描述:<b>4.8</b></span>
+                                <span class="listup-tgr-arrow"></span>
+                            </li>
+                            <li>
+                                <span class="morethan">服务态度:<b>4.8</b></span>
+                                <span class="listup-tgr-arrow"></span>
+                            </li>
+                            <li>
+                                <span class="morethan">发货速度:<b>4.8</b></span>
+                                <span class="listup-tgr-arrow"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="item">
+        <a target="_blank" href="#">
+
+            <div class="imgContainer">
+                <span class="imgLink">
+                    <img src="img/img2.jpg">
+                </span>
+            </div>
+            <div class="info">
+                <p class="price">
+                    <span class="pricedetail">¥ <strong>1200</strong></span>
+                    <span class="postalicon">包邮</span>
+                </p>
+                <span class="title" title="春夏2020新款女时髦套装韩版时尚气质淑">
+                    春夏2020新款女时髦套装韩版时尚气质淑
+                    
+                </span>
+                <p class="shopName">
+                    <span class="shopNick">apple</span>
+                    <span class="payNum">2人付款</span>
+                </p>
+                <div class="moreInfo">
+                    <div class="dsr-info">
+                        <span class="active dsr-info-tgr">
+                            <span class="icon-btn-dsr">如实描述:</span>
+                        <span class="dsr-info-num">4.9</span>
+                        <span class="dropdown-tgr-arrow"></span>
+                        </span>
+                        <ul class="dsr-info-list">
+                            <li>
+                                <span class="morethan">如实描述:<b>4.9</b></span>
+                                <span class="listup-tgr-arrow"></span>
+                            </li>
+                            <li>
+                                <span class="morethan">服务态度:<b>4.9</b></span>
+                                <span class="listup-tgr-arrow"></span>
+                            </li>
+                            <li>
+                                <span class="morethan">发货速度:<b>4.9</b></span>
+                                <span class="listup-tgr-arrow"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="item">
+        <a target="_blank" href="#">
+
+            <div class="imgContainer">
+                <span class="imgLink">
+                    <img src="img/img3.jpg">
+                </span>
+            </div>
+            <div class="info">
+                <p class="price">
+                    <span class="pricedetail">¥ <strong>119</strong></span>
+                    <span class="postalicon">包邮</span>
+                </p>
+                <span class="title" title="开学季宽松ins短袖t恤2020韩版女装学生百搭">
+                    开学季宽松ins短袖t恤2020韩版女装学生百搭
+                    
+                </span>
+                <p class="shopName">
+                    <span class="shopNick">ins</span>
+                    <span class="payNum">12人付款</span>
+                </p>
+                <div class="moreInfo">
+                    <div class="dsr-info">
+                        <span class="active dsr-info-tgr">
+                            <span class="icon-btn-dsr">如实描述:</span>
+                        <span class="dsr-info-num">4.7</span>
+                        <span class="dropdown-tgr-arrow"></span>
+                        </span>
+                        <ul class="dsr-info-list">
+                            <li>
+                                <span class="morethan">如实描述:<b>4.7</b></span>
+                                <span class="listup-tgr-arrow"></span>
+                            </li>
+                            <li>
+                                <span class="morethan">服务态度:<b>4.8</b></span>
+                                <span class="listup-tgr-arrow"></span>
+                            </li>
+                            <li>
+                                <span class="morethan">发货速度:<b>4.9</b></span>
+                                <span class="listup-tgr-arrow"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="item">
+        <a target="_blank" href="#">
+
+            <div class="imgContainer">
+                <span class="imgLink">
+                    <img src="img/img4.jpg">
+                </span>
+            </div>
+            <div class="info">
+                <p class="price">
+                    <span class="pricedetail">¥ <strong>286</strong></span>
+                    <span class="postalicon">包邮</span>
+                </p>
+                <span class="title" title="丝绒烧花连衣裙长袖秋新款时尚中年女装妈妈">
+                    丝绒烧花连衣裙长袖秋新款时尚中年女装妈妈
+                    
+                </span>
+                <p class="shopName">
+                    <span class="shopNick">丝绒烧花</span>
+                    <span class="payNum">11人付款</span>
+                </p>
+                <div class="moreInfo">
+                    <div class="dsr-info">
+                        <span class="active dsr-info-tgr">
+                            <span class="icon-btn-dsr">如实描述:</span>
+                        <span class="dsr-info-num">4.9</span>
+                        <span class="dropdown-tgr-arrow"></span>
+                        </span>
+                        <ul class="dsr-info-list">
+                            <li>
+                                <span class="morethan">如实描述:<b>4.9</b></span>
+                                <span class="listup-tgr-arrow"></span>
+                            </li>
+                            <li>
+                                <span class="morethan">服务态度:<b>4.8</b></span>
+                                <span class="listup-tgr-arrow"></span>
+                            </li>
+                            <li>
+                                <span class="morethan">发货速度:<b>4.9</b></span>
+                                <span class="listup-tgr-arrow"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="item">
+        <a target="_blank" href="#">
+
+            <div class="imgContainer">
+                <span class="imgLink">
+                    <img src="img/img5.jpg">
+                </span>
+            </div>
+            <div class="info">
+                <p class="price">
+                    <span class="pricedetail">¥ <strong>1399</strong></span>
+                    <span class="postalicon">包邮</span>
+                </p>
+                <span class="title" title="字母刺绣2020夏装韩国新款短袖T恤女修身学">
+                    字母刺绣2020夏装韩国新款短袖T恤女修身学
+                    
+                </span>
+                <p class="shopName">
+                    <span class="shopNick">母刺绣</span>
+                    <span class="payNum">120人付款</span>
+                </p>
+                <div class="moreInfo">
+                    <div class="dsr-info">
+                        <span class="active dsr-info-tgr">
+                            <span class="icon-btn-dsr">如实描述:</span>
+                        <span class="dsr-info-num">4.3</span>
+                        <span class="dropdown-tgr-arrow"></span>
+                        </span>
+                        <ul class="dsr-info-list">
+                            <li>
+                                <span class="morethan">如实描述:<b>4.3</b></span>
+                                <span class="listup-tgr-arrow"></span>
+                            </li>
+                            <li>
+                                <span class="morethan">服务态度:<b>4.8</b></span>
+                                <span class="listup-tgr-arrow"></span>
+                            </li>
+                            <li>
+                                <span class="morethan">发货速度:<b>4.9</b></span>
+                                <span class="listup-tgr-arrow"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="item">
+        <a target="_blank" href="#">
+
+            <div class="imgContainer">
+                <span class="imgLink">
+                    <img src="img/img6.jpg">
+                </span>
+            </div>
+            <div class="info">
+                <p class="price">
+                    <span class="pricedetail">¥ <strong>1199</strong></span>
+                    <span class="postalicon">包邮</span>
+                </p>
+                <span class="title" title="小八同学气质时尚潮流风衣中长款2020年秋季">
+                    小八同学气质时尚潮流风衣中长款2020年秋季
+                    
+                </span>
+                <p class="shopName">
+                    <span class="shopNick">小八同学</span>
+                    <span class="payNum">7人付款</span>
+                </p>
+                <div class="moreInfo">
+                    <div class="dsr-info">
+                        <span class="active dsr-info-tgr">
+                            <span class="icon-btn-dsr">如实描述:</span>
+                        <span class="dsr-info-num">5.0</span>
+                        <span class="dropdown-tgr-arrow"></span>
+                        </span>
+                        <ul class="dsr-info-list">
+                            <li>
+                                <span class="morethan">如实描述:<b>5.0</b></span>
+                                <span class="listup-tgr-arrow"></span>
+                            </li>
+                            <li>
+                                <span class="morethan">服务态度:<b>4.8</b></span>
+                                <span class="listup-tgr-arrow"></span>
+                            </li>
+                            <li>
+                                <span class="morethan">发货速度:<b>4.9</b></span>
+                                <span class="listup-tgr-arrow"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="item">
+        <a target="_blank" href="#">
+
+            <div class="imgContainer">
+                <span class="imgLink">
+                    <img src="img/img7.jpg">
+                </span>
+            </div>
+            <div class="info">
+                <p class="price">
+                    <span class="pricedetail">¥ <strong>299</strong></span>
+                    <span class="postalicon">包邮</span>
+                </p>
+                <span class="title" title="2020夏季韩版短款宽松纯色修身短袖T恤女上">
+                    2020夏季韩版短款宽松纯色修身短袖T恤女上
+                    
+                </span>
+                <p class="shopName">
+                    <span class="shopNick">小八同学</span>
+                    <span class="payNum">9人付款</span>
+                </p>
+                <div class="moreInfo">
+                    <div class="dsr-info">
+                        <span class="active dsr-info-tgr">
+                            <span class="icon-btn-dsr">如实描述:</span>
+                        <span class="dsr-info-num">4.8</span>
+                        <span class="dropdown-tgr-arrow"></span>
+                        </span>
+                        <ul class="dsr-info-list">
+                            <li>
+                                <span class="morethan">如实描述:<b>4.8</b></span>
+                                <span class="listup-tgr-arrow"></span>
+                            </li>
+                            <li>
+                                <span class="morethan">服务态度:<b>4.8</b></span>
+                                <span class="listup-tgr-arrow"></span>
+                            </li>
+                            <li>
+                                <span class="morethan">发货速度:<b>4.9</b></span>
+                                <span class="listup-tgr-arrow"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="item">
+        <a target="_blank" href="#">
+
+            <div class="imgContainer">
+                <span class="imgLink">
+                    <img src="img/img8.jpg">
+                </span>
+            </div>
+            <div class="info">
+                <p class="price">
+                    <span class="pricedetail">¥ <strong>99</strong></span>
+                    <span class="postalicon">包邮</span>
+                </p>
+                <span class="title" title="WHOAU法式小众碎花连衣裙女装2020新款夏天">
+                    WHOAU法式小众碎花连衣裙女装2020新款夏天
+                    
+                </span>
+                <p class="shopName">
+                    <span class="shopNick">WHOAU</span>
+                    <span class="payNum">19人付款</span>
+                </p>
+                <div class="moreInfo">
+                    <div class="dsr-info">
+                        <span class="active dsr-info-tgr">
+                            <span class="icon-btn-dsr">如实描述:</span>
+                        <span class="dsr-info-num">4.9</span>
+                        <span class="dropdown-tgr-arrow"></span>
+                        </span>
+                        <ul class="dsr-info-list">
+                            <li>
+                                <span class="morethan">如实描述:<b>4.9</b></span>
+                                <span class="listup-tgr-arrow"></span>
+                            </li>
+                            <li>
+                                <span class="morethan">服务态度:<b>4.8</b></span>
+                                <span class="listup-tgr-arrow"></span>
+                            </li>
+                            <li>
+                                <span class="morethan">发货速度:<b>4.9</b></span>
+                                <span class="listup-tgr-arrow"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="item">
+        <a target="_blank" href="#">
+
+            <div class="imgContainer">
+                <span class="imgLink">
+                    <img src="img/img9.jpg">
+                </span>
+            </div>
+            <div class="info">
+                <p class="price">
+                    <span class="pricedetail">¥ <strong>699</strong></span>
+                    <span class="postalicon">包邮</span>
+                </p>
+                <span class="title" title="2020夏季韩版短款宽松纯色修身短袖T恤女上">
+                    2020夏季韩版短款宽松纯色修身短袖T恤女上
+                    
+                </span>
+                <p class="shopName">
+                    <span class="shopNick">松纯色</span>
+                    <span class="payNum">9人付款</span>
+                </p>
+                <div class="moreInfo">
+                    <div class="dsr-info">
+                        <span class="active dsr-info-tgr">
+                            <span class="icon-btn-dsr">如实描述:</span>
+                        <span class="dsr-info-num">4.7</span>
+                        <span class="dropdown-tgr-arrow"></span>
+                        </span>
+                        <ul class="dsr-info-list">
+                            <li>
+                                <span class="morethan">如实描述:<b>4.7</b></span>
+                                <span class="listup-tgr-arrow"></span>
+                            </li>
+                            <li>
+                                <span class="morethan">服务态度:<b>4.8</b></span>
+                                <span class="listup-tgr-arrow"></span>
+                            </li>
+                            <li>
+                                <span class="morethan">发货速度:<b>4.9</b></span>
+                                <span class="listup-tgr-arrow"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="item">
+        <a target="_blank" href="#">
+
+            <div class="imgContainer">
+                <span class="imgLink">
+                    <img src="img/img10.jpg">
+                </span>
+            </div>
+            <div class="info">
+                <p class="price">
+                    <span class="pricedetail">¥ <strong>1699</strong></span>
+                    <span class="postalicon">包邮</span>
+                </p>
+                <span class="title" title="100%桑蚕丝连衣裙真丝2020新款夏气质显瘦">
+                    100%桑蚕丝连衣裙真丝2020新款夏气质显瘦
+                    
+                </span>
+                <p class="shopName">
+                    <span class="shopNick">桑蚕</span>
+                    <span class="payNum">299人付款</span>
+                </p>
+                <div class="moreInfo">
+                    <div class="dsr-info">
+                        <span class="active dsr-info-tgr">
+                            <span class="icon-btn-dsr">如实描述:</span>
+                        <span class="dsr-info-num">4.9</span>
+                        <span class="dropdown-tgr-arrow"></span>
+                        </span>
+                        <ul class="dsr-info-list">
+                            <li>
+                                <span class="morethan">如实描述:<b>4.9</b></span>
+                                <span class="listup-tgr-arrow"></span>
+                            </li>
+                            <li>
+                                <span class="morethan">服务态度:<b>4.8</b></span>
+                                <span class="listup-tgr-arrow"></span>
+                            </li>
+                            <li>
+                                <span class="morethan">发货速度:<b>4.9</b></span>
+                                <span class="listup-tgr-arrow"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+</body>
+
+</html>
