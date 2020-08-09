@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            -webkit-font-smoothing: antialiased;
+            background-color: #fff;
+            font: 12px/1.5 Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+        }
+        
+        .seckill-countdown {
+            position: relative;
+            float: left;
+            width: 190px;
+            height: 100%;
+            color: #fff;
+            background-color: #e83632;
+            background-image: url(img/img1.png);
+            background-size: contain;
+            background-position: 50%;
+            background-repeat: no-repeat;
+        }
+        
+        .seckill-countdown .countdown-title {
+            width: 100%;
+            text-align: center;
+            font-size: 30px;
+            font-weight: 700;
+            margin-top: 31px;
+        }
+        
+        .seckill-countdown .countdown-desc {
+            margin-top: 90px;
+            font-size: 14px;
+            text-align: center;
+            text-decoration: none;
+        }
+        
+        .seckill-countdown .countdown-main {
+            margin-left: auto;
+            margin-right: auto;
+            width: 150px;
+            height: 30px;
+            margin-top: 10px;
+            display: block;
+        }
+        
+        .timmer {
+            color: #333;
+            font-weight: 700;
+        }
+        
+        .seckill-countdown .countdown-main .timmer__unit {
+            position: relative;
+            float: left;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            background-color: #2f3430;
+            margin-right: 20px;
+            color: white;
+            font-size: 20px;
+        }
+        
+        .seckill-countdown .countdown-main .timmer__unit:after {
+            content: ":";
+            display: block;
+            position: absolute;
+            right: -20px;
+            font-weight: bolder;
+            font-size: 18px;
+            width: 20px;
+            height: 100%;
+            top: 0;
+        }
+        
+        .timmer .timmer__unit:last-child:after {
+            content: "";
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <script language="javascript">
+        // var hour = ;
+        // alert(hour);
+        var inputTime = new Date(2020, 8, 9, 22, 0, 0);
+
+        setInterval(countDown, 1000);
+
+        function countDown() {
+            var nowtime = new Date();
+            var times = (inputTime - nowtime) / 1000;
+            var h = parseInt(times / 60 / 60 % 24);
+            if (h < 10) {
+                h = '0' + h;
+            }
+            var m = parseInt(times / 60 % 60);
+            if (m < 10) {
+                m = '0' + m
+            }
+            var s = parseInt(times % 60);
+            if (s < 10) {
+                s = '0' + s;
+            }
+            var hour = document.getElementById("hours");
+            var minute = document.getElementById("minutes");
+            var second = document.getElementById("secondes");
+
+
+            hour.innerHTML = h;
+            minute.innerHTML = m;
+            second.innerHTML = s;
+            // var show = document.getElementsByClassName("timmer__unit--hour")
+            // show[0].innerHTML = h;
+        }
+    </script>
+</head>
+
+<body>
+    <a class="seckill-countdown" href="#" target="_blank">
+        <div class="countdown-title">淘宝秒杀</div>
+        <div>
+            <div class="countdown-desc">
+                <strong>22:00</strong> 点场 倒计时
+            </div>
+            <span class="timmer countdown-main">
+                    <span class="timmer__unit" id="hours">
+                        
+                    </span>
+            <span class="timmer__unit" id="minutes">
+                        
+                    </span>
+            <span class="timmer__unit" id="secondes">
+                        
+                    </span>
+            </span>
+        </div>
+    </a>
+</body>
+
+</html>
